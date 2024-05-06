@@ -1,0 +1,41 @@
+﻿@model YemekSitesi.Models.Tables.tbl_uye
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Üye Güncelle</h3>
+<br />
+<br />
+@using (Html.BeginForm())
+{
+<div class="form-group">
+    <label for="exampleInputEmail1">Ad:</label>
+    @Html.TextBoxFor(x => x.uyeAd, new { @class = "form-control" })
+    <br />
+    <label for="exampleInputEmail1">Soyad:</label>
+    @Html.TextBoxFor(x => x.uyeSoyad, new { @class = "form-control" })
+    <br />
+    <label for="exampleInputEmail1">Kullanıcı Adı:</label>
+    @Html.TextBoxFor(x => x.uyeKullaniciAd, new { @class = "form-control" })
+    <br />
+    <label for="exampleInputEmail1">E-Posta:</label>
+    @Html.TextBoxFor(x => x.uyeEposta, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.UyeTipi, "Durum:")
+    @Html.DropDownListFor(x => x.UyeTipi, new SelectList(
+        new List<Object>
+        {
+            new { Value = "0", Text = "Üye" },
+            new { Value = "1", Text = "Admin" }
+        },
+        "Value",
+        "Text"
+    ), new { @class = "form-control" })
+
+</div>
+    <br />
+    <button type="submit" class="btn btn-primary">Üye Güncelle</button>
+
+}
+

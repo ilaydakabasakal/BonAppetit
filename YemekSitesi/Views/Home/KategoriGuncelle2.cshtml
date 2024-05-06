@@ -1,0 +1,21 @@
+﻿@model YemekSitesi.Models.Tables.tbl_kategori
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Kategori Güncelle</h3>
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="exampleInputEmail1">Kategori Adı:</label>
+        @Html.TextBoxFor(x => x.kategoriAd, new { @class = "form-control" })
+        
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Kategori Güncelle</button>
+
+}
+

@@ -1,0 +1,63 @@
+﻿@model List<YemekSitesi.Models.Tables.tbl_iletisim>
+@{
+    ViewBag.Title = "Mesaj";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Mesajlar</h3>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"></li>
+</ol>
+@*<ul class="nav nav-pills justify-content-end mb-3">
+    <li class="nav-item mx-1">
+        @Html.ActionLink("Ekle", "UyeEkle", "Home", null, new { @class = "btn btn-success", aria_current = "page" })
+    </li>
+</ul>*@
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table" id=" datatablesSimple">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Ad</th>
+                    <th scope="col">Soyad</th>
+                    <th scope="col">E posta</th>
+                    <th scope="col">Mesaj</th>
+                    <th scope="col">İşlem</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var mesajlar in Model)
+                {
+                    <tr>
+
+                        <th scope="row">@mesajlar.mesajID</th>
+                        <td>@mesajlar.mesajAd</td>
+                        <td>@mesajlar.mesajSoyad</td>
+                        <td>@mesajlar.mesajEposta</td>
+                        <td>@mesajlar.mesaj</td>
+                        <th scope="row">
+                            @Html.ActionLink("Sil", "MesajSil2", "Home", new { mesajID = mesajlar.mesajID }, new { @class = "btn btn-primary btn-sm" })
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+

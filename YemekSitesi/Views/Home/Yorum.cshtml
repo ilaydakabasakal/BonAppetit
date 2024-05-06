@@ -1,0 +1,50 @@
+﻿@model List<YemekSitesi.Models.Tables.tbl_yorum>
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Yorumlar</h3>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"></li>
+</ol>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table" id=" datatablesSimple">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Yorum</th>
+                    <th scope="col">Tarif Başlığı</th>
+                    <th scope="col">Üye Kullanıcı Adı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var yorumlar in Model)
+                {
+                <tr>
+
+                    <th scope="row">@yorumlar.yorumID</th>
+                    <td>@yorumlar.yorum</td>
+                    <td>@yorumlar.tarif</td>
+                    <td>@yorumlar.sahip</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+
+*, body {
+    margin: 0;
+}
+
+.head {
+    align-items: center;
+    justify-content: center;
+    background-color: #CCDF82;
+}
+
+    .head .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #CCDC89;
+        z-index: 9999;
+    }
+
+        .head .header .icon img {
+            height: 70px;
+            padding: 5px;
+        }
+
+        .head .header nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #683514;
+        }
+
+.login {
+    margin-right: 45px;
+}
+
+    .login a {
+        text-decoration: none;
+        color: #683514;
+    }

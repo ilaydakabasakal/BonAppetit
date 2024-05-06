@@ -1,0 +1,50 @@
+﻿@model YemekSitesi.Models.Tables.tbl_uye
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giris Yap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("~/template/assets/nat1.jpg");
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 320px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        @using (Html.BeginForm("Giris", "Ana", FormMethod.Post))
+        {
+<h2 class="text-center mb-5">Giris Yap</h2>
+                <div class="form-group mb-3">
+                    <label class="mb-2 fw-semibold">Kullanici Adi</label>
+                    @Html.TextBoxFor(x => x.uyeKullaniciAd, new { @class = "form-control" })
+                </div>
+                <div class="form-group mb-3">
+                    <label class="mb-2 fw-semibold">Sifre</label>
+                    @Html.PasswordFor(y => y.uyeParola, new { @class = "form-control" })
+                </div>
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>}
+        <div class="register-link text-center mt-3">
+            <p>Hesabın yok mu? <a href="~/Ana/kayit">Kayıt Ol</a></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

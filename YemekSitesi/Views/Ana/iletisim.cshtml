@@ -1,0 +1,60 @@
+﻿@model YemekSitesi.Models.Tables.tbl_iletisim
+
+@{
+    ViewBag.Title = "iletisim";
+    Layout = "~/Views/Shared/Anasayfa_Layout.cshtml";
+}
+<div id="contact" class="iletisim container">
+    <h2>İLETİŞİM</h2>
+    <hr color="#233F00" size="3" />
+    @using (Html.BeginForm("iletisim", "Ana", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="row col-6 offset-3 g-3 container">
+            <div class="col">
+                <label for="inputEmail4" class="form-label">Ad</label>
+                @Html.TextBoxFor(x => x.mesajAd, new { @class = "form-control" })
+                @*<input type="text"
+                       class="form-control"
+                       placeholder="Ad"
+                       aria-label="First name" />*@
+            </div>
+            <div class="col">
+                <label for="inputEmail4" class="form-label">Soyad</label>
+                @Html.TextBoxFor(x => x.mesajSoyad, new { @class = "form-control" })
+                @*<input type="text"
+                       class="form-control"
+                       placeholder="Soyad"
+                       aria-label="Last name" />*@
+            </div>
+            <form class="row g-3">
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    @Html.TextBoxFor(x => x.mesajEposta, new { @class = "form-control" })
+                    @*<input type="email"
+                           class="form-control"
+                           id="inputEmail4"
+                           placeholder="Email" />*@
+                </div>
+                <div class="col">
+                    @*<label for="inputEmail4" class="form-label">Kullanıcı Adı</label>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Kullanıcı Adı"
+                           aria-label="User name" />*@
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mesajınız</label>
+                    @Html.TextAreaFor(x => x.mesaj, new { @class = "form-control" })
+                    @*<textarea class="form-control"
+                              id="exampleFormControlTextarea1"
+                              rows="3"></textarea>*@
+                </div>
+                <div class="col-12"></div>
+                <div class="col-12">
+                    <button type="submit" class="btn" style="background: linear-gradient(to bottom, rgba(248, 190, 230, 1) 0%, rgba(210, 180, 222, 1) 100%) ">Gönder</button>
+                </div>
+            </form>
+        </div>
+    }
+</div>
+

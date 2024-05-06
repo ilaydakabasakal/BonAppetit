@@ -1,0 +1,476 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF07D9BF-49F9-4C08-A280-899A1C9D3A51}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YemekSitesi</RootNamespace>
+    <AssemblyName>YemekSitesi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin_frontend\401.html" />
+    <Content Include="Admin_frontend\404.html" />
+    <Content Include="Admin_frontend\500.html" />
+    <Content Include="Admin_frontend\assets\demo\chart-area-demo.js" />
+    <Content Include="Admin_frontend\assets\demo\chart-bar-demo.js" />
+    <Content Include="Admin_frontend\assets\demo\chart-pie-demo.js" />
+    <Content Include="Admin_frontend\assets\demo\datatables-demo.js" />
+    <Content Include="Admin_frontend\assets\img\error-404-monochrome.svg" />
+    <Content Include="Admin_frontend\charts.html" />
+    <Content Include="Admin_frontend\css\styles.css" />
+    <Content Include="Admin_frontend\index.html" />
+    <Content Include="Admin_frontend\js\datatables-simple-demo.js" />
+    <Content Include="Admin_frontend\js\scripts.js" />
+    <Content Include="Admin_frontend\layout-sidenav-light.html" />
+    <Content Include="Admin_frontend\layout-static.html" />
+    <Content Include="Admin_frontend\login.html" />
+    <Content Include="Admin_frontend\password.html" />
+    <Content Include="Admin_frontend\register.html" />
+    <Content Include="Admin_frontend\tables.html" />
+    <Content Include="Global.asax" />
+    <Content Include="kullaniciicin\font\.DS_Store" />
+    <Content Include="kullaniciicin\font\unicons.eot" />
+    <Content Include="kullaniciicin\font\unicons.ttf" />
+    <Content Include="kullaniciicin\font\unicons.woff" />
+    <Content Include="kullaniciicin\font\unicons.woff2" />
+    <Content Include="kullaniciicin\images\project\curry-7249247.jpg" />
+    <Content Include="kullaniciicin\images\project\fish-5994942.jpg" />
+    <Content Include="kullaniciicin\images\project\green-8667981.jpg" />
+    <Content Include="kullaniciicin\images\project\meal-5921491.jpg" />
+    <Content Include="kullaniciicin\images\project\plate-2802332.jpg" />
+    <Content Include="kullaniciicin\images\undraw\r1.jpg" />
+    <Content Include="kullaniciicin\images\undraw\r2.png" />
+    <Content Include="kullaniciicin\sass\tooplate-style.scss" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="kullaniciicin\css\bootstrap.min.css" />
+    <Content Include="kullaniciicin\css\owl.carousel.min.css" />
+    <Content Include="kullaniciicin\css\owl.theme.default.min.css" />
+    <Content Include="kullaniciicin\css\tooplate-style.css" />
+    <Content Include="kullaniciicin\css\unicons.css" />
+    <Content Include="kullaniciicin\font\unicons.svg" />
+    <Content Include="kullaniciicin\images\undraw\undraw_software_engineer_lvl5.svg" />
+    <Content Include="kullaniciicin\js\bootstrap.min.js" />
+    <Content Include="kullaniciicin\js\custom.js" />
+    <Content Include="kullaniciicin\js\Headroom.js" />
+    <Content Include="kullaniciicin\js\jquery-3.3.1.min.js" />
+    <Content Include="kullaniciicin\js\jQuery.headroom.js" />
+    <Content Include="kullaniciicin\js\owl.carousel.min.js" />
+    <Content Include="kullaniciicin\js\popper.min.js" />
+    <Content Include="kullaniciicin\js\smoothscroll.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="tarifgonder1\css\style.css" />
+    <Content Include="tarifgonder1\fonts\linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="tarifgonder1\fonts\linearicons\Read Me.txt" />
+    <Content Include="tarifgonder1\fonts\linearicons\style.css" />
+    <Content Include="tarifgonder1\images\image-1.png" />
+    <Content Include="tarifgonder1\images\image-2.png" />
+    <Content Include="tarifgonder1\images\wok-pan.png" />
+    <Content Include="tarifgonder1\images\wrt.png" />
+    <Content Include="tarifgonder1\js\jquery-3.3.1.min.js" />
+    <Content Include="tarifgonder1\js\main.js" />
+    <Content Include="template\abd.html" />
+    <Content Include="template\assets\Alooparatha.jpg" />
+    <Content Include="template\assets\Applepie.jpg" />
+    <Content Include="template\assets\Babaghanoush.jpg" />
+    <Content Include="template\assets\Baguette.jpg" />
+    <Content Include="template\assets\Bamya.jpg" />
+    <Content Include="template\assets\Bangersandmash.jpg" />
+    <Content Include="template\assets\Basbousa.jpg" />
+    <Content Include="template\assets\BBQribs.jpg" />
+    <Content Include="template\assets\beacon.min.js" />
+    <Content Include="template\assets\Beefandalepie.jpg" />
+    <Content Include="template\assets\Beefstewanddumplings.jpg" />
+    <Content Include="template\assets\Beefstroganoff.jpg" />
+    <Content Include="template\assets\Beeftartare.jpg" />
+    <Content Include="template\assets\Beefwellington.jpg" />
+    <Content Include="template\assets\Biryani.jpg" />
+    <Content Include="template\assets\Bisteccaallafiorentina.jpg" />
+    <Content Include="template\assets\Blini.jpg" />
+    <Content Include="template\assets\Boeufbourguignon.jpg" />
+    <Content Include="template\assets\Borscht.jpg" />
+    <Content Include="template\assets\Bouillabaisse.jpg" />
+    <Content Include="template\assets\Bouledeneige.jpg" />
+    <Content Include="template\assets\Bruschetta.jpg" />
+    <Content Include="template\assets\Buffalowings.jpg" />
+    <Content Include="template\assets\Butterchicken.jpg" />
+    <Content Include="template\assets\Cacioepepe.jpg" />
+    <Content Include="template\assets\Californiasushirolls.jpg" />
+    <Content Include="template\assets\Cannoli.jpg" />
+    <Content Include="template\assets\Capresesalad.jpg" />
+    <Content Include="template\assets\Cassoulet.jpg" />
+    <Content Include="template\assets\Chawanmushi.jpg" />
+    <Content Include="template\assets\Chicagostyledeepdishpizza.jpg" />
+    <Content Include="template\assets\Chickencurry.jpg" />
+    <Content Include="template\assets\Chickenkiev.jpg" />
+    <Content Include="template\assets\Chickentikkamasala.jpg" />
+    <Content Include="template\assets\Cholebhature.jpg" />
+    <Content Include="template\assets\Clamchowder.jpg" />
+    <Content Include="template\assets\Coqauvin.jpg" />
+    <Content Include="template\assets\Cornishpasty.jpg" />
+    <Content Include="template\assets\Croissant.jpg" />
+    <Content Include="template\assets\Crumpets.jpg" />
+    <Content Include="template\assets\Crèmebrûlée.jpg" />
+    <Content Include="template\assets\Crêpessuzette.jpg" />
+    <Content Include="template\assets\Daltadka.jpg" />
+    <Content Include="template\assets\Dhokla.jpg" />
+    <Content Include="template\assets\Donburi.jpg" />
+    <Content Include="template\assets\Draniki.jpg" />
+    <Content Include="template\assets\Duckconfit.jpg" />
+    <Content Include="template\assets\earth.svg" />
+    <Content Include="template\assets\egypt.jpg" />
+    <Content Include="template\assets\egypt.svg" />
+    <Content Include="template\assets\england.jpg" />
+    <Content Include="template\assets\england.svg" />
+    <Content Include="template\assets\Escargot.jpg" />
+    <Content Include="template\assets\Etonmess.jpg" />
+    <Content Include="template\assets\Fasikh.jpg" />
+    <Content Include="template\assets\Fattah.jpg" />
+    <Content Include="template\assets\Fishandchips.jpg" />
+    <Content Include="template\assets\Foiegras.jpg" />
+    <Content Include="template\assets\france.jpg" />
+    <Content Include="template\assets\france.svg" />
+    <Content Include="template\assets\Friedchicken.jpg" />
+    <Content Include="template\assets\Fullenglishbreakfast.jpg" />
+    <Content Include="template\assets\Fulmedames.jpg" />
+    <Content Include="template\assets\Gelato.jpg" />
+    <Content Include="template\assets\Gnocchi.jpg" />
+    <Content Include="template\assets\Golubtsy.jpg" />
+    <Content Include="template\assets\Goulash.jpg" />
+    <Content Include="template\assets\Gyoza.jpg" />
+    <Content Include="template\assets\hakkimizda.jpg" />
+    <Content Include="template\assets\hamburger.jpg" />
+    <Content Include="template\assets\Hawawshi.jpg" />
+    <Content Include="template\assets\Herring.jpg" />
+    <Content Include="template\assets\hotdog.jpg" />
+    <Content Include="template\assets\Hyderabadibiryani.jpg" />
+    <Content Include="template\assets\icon.png" />
+    <Content Include="template\assets\index.3763fc0e.css" />
+    <Content Include="template\assets\index.72ad9ffa.js" />
+    <Content Include="template\assets\india.jpg" />
+    <Content Include="template\assets\india.svg" />
+    <Content Include="template\assets\Insalatadimare.jpg" />
+    <Content Include="template\assets\italy.jpg" />
+    <Content Include="template\assets\italy.svg" />
+    <Content Include="template\assets\japan.jpg" />
+    <Content Include="template\assets\japan.svg" />
+    <Content Include="template\assets\Kaisekiryori.jpg" />
+    <Content Include="template\assets\Kasha.jpg" />
+    <Content Include="template\assets\Kebab.jpg" />
+    <Content Include="template\assets\Keylimepie.jpg" />
+    <Content Include="template\assets\Koshari.jpg" />
+    <Content Include="template\assets\Kulebyaka.jpg" />
+    <Content Include="template\assets\Kunafa.jpg" />
+    <Content Include="template\assets\Lobsterroll.jpg" />
+    <Content Include="template\assets\logo.png" />
+    <Content Include="template\assets\MacaroniandCheese.jpg" />
+    <Content Include="template\assets\Macarons.jpg" />
+    <Content Include="template\assets\Mahshi.jpg" />
+    <Content Include="template\assets\Malaikofta.jpg" />
+    <Content Include="template\assets\Masaladosa.jpg" />
+    <Content Include="template\assets\Meshabek.jpg" />
+    <Content Include="template\assets\Minestronesoup.jpg" />
+    <Content Include="template\assets\Misoçorbası.jpg" />
+    <Content Include="template\assets\Molokhia.jpg" />
+    <Content Include="template\assets\Morozhenoe.jpg" />
+    <Content Include="template\assets\Newtyorkstylecheesecake.jpg" />
+    <Content Include="template\assets\Oden.jpg" />
+    <Content Include="template\assets\Okonomiyaki.jpg" />
+    <Content Include="template\assets\Olivier Salatası.jpg" />
+    <Content Include="template\assets\Oliviersalatası.jpg" />
+    <Content Include="template\assets\Onigiri.jpg" />
+    <Content Include="template\assets\Orecchiettewithbroccolirabe.jpg" />
+    <Content Include="template\assets\Ossobuco.jpg" />
+    <Content Include="template\assets\Palakpaneer.jpg" />
+    <Content Include="template\assets\Pancakes.jpg" />
+    <Content Include="template\assets\Paneertikka.jpg" />
+    <Content Include="template\assets\Panini.jpg" />
+    <Content Include="template\assets\Panipuri.jpg" />
+    <Content Include="template\assets\Pannacotta.jpg" />
+    <Content Include="template\assets\Pasta.jpg" />
+    <Content Include="template\assets\Pavbhaji.jpg" />
+    <Content Include="template\assets\Pelmeni.jpg" />
+    <Content Include="template\assets\Phillycheesesteak.jpg" />
+    <Content Include="template\assets\Pirozhki.jpg" />
+    <Content Include="template\assets\pizza.jpg" />
+    <Content Include="template\assets\Pizzaitaly.jpg" />
+    <Content Include="template\assets\Polenta.jpg" />
+    <Content Include="template\assets\Profiteroles.jpg" />
+    <Content Include="template\assets\Prosciuttoemelone.jpg" />
+    <Content Include="template\assets\Pryaniki.jpg" />
+    <Content Include="template\assets\Quichelorraine.jpg" />
+    <Content Include="template\assets\Ramen.jpg" />
+    <Content Include="template\assets\Rasgulla.jpg" />
+    <Content Include="template\assets\Rasolnik.jpg" />
+    <Content Include="template\assets\Rasstegai.jpg" />
+    <Content Include="template\assets\Ratatouille.jpg" />
+    <Content Include="template\assets\Ravioli.jpg" />
+    <Content Include="template\assets\resim1.jpg" />
+    <Content Include="template\assets\Reubensandwich.jpg" />
+    <Content Include="template\assets\Risotto.jpg" />
+    <Content Include="template\assets\Roastbeefwithyorkshirepudding.jpg" />
+    <Content Include="template\assets\Roganjosh.jpg" />
+    <Content Include="template\assets\Rozbellaban.jpg" />
+    <Content Include="template\assets\Rozmaa%27mar.jpg" />
+    <Content Include="template\assets\rr2.jpg" />
+    <Content Include="template\assets\rr3.jpg" />
+    <Content Include="template\assets\rr4.jpg" />
+    <Content Include="template\assets\rr5.jpg" />
+    <Content Include="template\assets\rr6.jpg" />
+    <Content Include="template\assets\rrr1.png" />
+    <Content Include="template\assets\russia.jpg" />
+    <Content Include="template\assets\russia.svg" />
+    <Content Include="template\assets\Saladeniçoise.jpg" />
+    <Content Include="template\assets\Samakmashwi.jpg" />
+    <Content Include="template\assets\Samosa.jpg" />
+    <Content Include="template\assets\Sashimi.jpg" />
+    <Content Include="template\assets\Scotchegg.jpg" />
+    <Content Include="template\assets\Shabu-Shabu.jpg" />
+    <Content Include="template\assets\Shawarma.jpg" />
+    <Content Include="template\assets\Shepherd%27spie.jpg" />
+    <Content Include="template\assets\Soba.jpg" />
+    <Content Include="template\assets\Solyanka.jpg" />
+    <Content Include="template\assets\Soufflé.jpg" />
+    <Content Include="template\assets\Southernfriedcatfish.jpg" />
+    <Content Include="template\assets\Steakandkidneypie.jpg" />
+    <Content Include="template\assets\Stickytoffeepudding.jpg" />
+    <Content Include="template\assets\Sushi.jpg" />
+    <Content Include="template\assets\Syrniki.jpg" />
+    <Content Include="template\assets\Ta%27meya.jpg" />
+    <Content Include="template\assets\Takoyak.jpg" />
+    <Content Include="template\assets\Tandoorichicken.jpg" />
+    <Content Include="template\assets\Tartetatin.jpg" />
+    <Content Include="template\assets\Teaandscones.jpg" />
+    <Content Include="template\assets\Tempura.jpg" />
+    <Content Include="template\assets\TexasBBQBrisket.jpg" />
+    <Content Include="template\assets\Texaschili.jpg" />
+    <Content Include="template\assets\Tiramisu.jpg" />
+    <Content Include="template\assets\Tonkatsu.jpg" />
+    <Content Include="template\assets\Udon.jpg" />
+    <Content Include="template\assets\Ummali.jpg" />
+    <Content Include="template\assets\usa.jpg" />
+    <Content Include="template\assets\usa.svg" />
+    <Content Include="template\assets\Vadapav.jpg" />
+    <Content Include="template\assets\vendor.78b3a2bd.js" />
+    <Content Include="template\assets\Victoriaspongecake.jpg" />
+    <Content Include="template\assets\Vinegret.jpg" />
+    <Content Include="template\assets\Welshrarebit.jpg" />
+    <Content Include="template\assets\Yakiniku.jpg" />
+    <Content Include="template\assets\Yakitori.jpg" />
+    <Content Include="template\assets\yemek.jpg" />
+    <Content Include="template\fransa.html" />
+    <Content Include="template\hakkimizda.html" />
+    <Content Include="template\hindistan.html" />
+    <Content Include="template\iletisim.html" />
+    <Content Include="template\iletisim.js" />
+    <Content Include="template\index.css" />
+    <Content Include="template\index.html" />
+    <Content Include="template\ingiltere.html" />
+    <Content Include="template\italya.html" />
+    <Content Include="template\japonya.html" />
+    <Content Include="template\login.css" />
+    <Content Include="template\login.html" />
+    <Content Include="template\login.js" />
+    <Content Include="template\misir.html" />
+    <Content Include="template\rusya.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AnaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KullaniciController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\Tables\tbl_begeni.cs" />
+    <Compile Include="Models\Tables\tbl_iletisim.cs" />
+    <Compile Include="Models\Tables\tbl_kategori.cs" />
+    <Compile Include="Models\Tables\tbl_tarif.cs" />
+    <Compile Include="Models\Tables\tbl_uye.cs" />
+    <Compile Include="Models\Tables\tbl_yorum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\Admin_Layout.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Home\UyeEkle.cshtml" />
+    <Content Include="Views\Home\UyeGuncelle2.cshtml" />
+    <Content Include="Views\Home\Kategori.cshtml" />
+    <Content Include="Views\Home\KategoriEkle.cshtml" />
+    <Content Include="Views\Home\KategoriGuncelle2.cshtml" />
+    <Content Include="Views\Home\Tarif.cshtml" />
+    <Content Include="Views\Home\TarifEkle.cshtml" />
+    <Content Include="Views\Home\TarifGuncelle2.cshtml" />
+    <Content Include="Views\Home\Begeni.cshtml" />
+    <Content Include="Views\Home\Yorum.cshtml" />
+    <Content Include="Views\Shared\Kullanici_Layout.cshtml" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="tarifgonder1\css\style.css.map" />
+    <Content Include="tarifgonder1\css\style.scss" />
+    <Content Include="tarifgonder1\fonts\linearicons\fonts\Linearicons-Free.eot" />
+    <Content Include="tarifgonder1\fonts\linearicons\fonts\Linearicons-Free.ttf" />
+    <Content Include="tarifgonder1\fonts\linearicons\fonts\Linearicons-Free.woff" />
+    <Content Include="tarifgonder1\fonts\linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="tarifgonder1\fonts\linearicons\selection.json" />
+    <Content Include="tarifgonder1\fonts\muli\Muli-Bold.ttf" />
+    <Content Include="tarifgonder1\fonts\muli\Muli-Regular.ttf" />
+    <Content Include="tarifgonder1\fonts\muli\Muli-SemiBold.ttf" />
+    <Content Include="Views\Kullanici\Kullanici.cshtml" />
+    <Content Include="Views\Kullanici\TarifGonder.cshtml" />
+    <Content Include="Views\Shared\Anasayfa_Layout.cshtml" />
+    <Content Include="Views\Ana\Anasayfa.cshtml" />
+    <Content Include="Views\Ana\Hakkimizda.cshtml" />
+    <Content Include="Views\Ana\iletisim.cshtml" />
+    <Content Include="Views\Ana\Giris.cshtml" />
+    <Content Include="Views\Ana\Kayit.cshtml" />
+    <Content Include="Views\Kullanici\Akis.cshtml" />
+    <Content Include="Views\Shared\Akis_Favoriler.cshtml" />
+    <Content Include="Views\Home\Mesaj.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\Filter\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57585</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57585/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

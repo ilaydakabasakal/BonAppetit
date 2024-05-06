@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim</title>
+    <link rel="icon" href="./assets/logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="./assets/index.3763fc0e.css" />
+    <script
+      src="https://kit.fontawesome.com/d755b7edb1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span >Bon Appétit</span>
+      </div>
+      <nav class="roboto-regular">
+        <a href="index.html">Anasayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+      <div class="login">
+        <a href="login.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-login-2"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2"
+            />
+            <path d="M3 12h13l-3 -3" />
+            <path d="M13 15l3 -3" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <div id="contact" class="iletisim container">
+      <h2>İLETİŞİM</h2>
+      <hr color="#233F00" size="3" />
+      <div class="row col-6 offset-3 g-3 container">
+        <div class="col">
+          <label for="inputEmail4" class="form-label">Ad</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Ad"
+            aria-label="First name"
+          />
+        </div>
+        <div class="col">
+          <label for="inputEmail4" class="form-label">Soyad</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Soyad"
+            aria-label="Last name"
+          />
+        </div>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail4"
+              placeholder="Email"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Şifre</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword4"
+              placeholder="Şifre"
+            />
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Adres</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              placeholder="Adres"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Mesajınız</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="col-12"></div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-success">Gönder</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

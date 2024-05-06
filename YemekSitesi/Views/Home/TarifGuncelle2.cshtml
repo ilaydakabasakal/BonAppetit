@@ -1,0 +1,32 @@
+﻿@model YemekSitesi.Models.Tables.tbl_tarif
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Tarif Güncelle</h3>
+<br />
+<br />
+@using (Html.BeginForm())
+{
+<div class="form-group">
+    <label for="exampleInputEmail1">Başlık:</label>
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+    <br />
+    <label for="exampleInputEmail1">Malzemeler:</label>
+    @Html.TextBoxFor(x => x.malzemeler, new { @class = "form-control" })
+    <br />
+    <label for="exampleInputEmail1">Metin:</label>
+    @Html.TextAreaFor(x => x.metin, new { @class = "form-control" })
+    <br />
+    <label for="exampleInputEmail1">Resim:</label>
+    @Html.TextBoxFor(x => x.resim, new { @class = "form-control" })
+    <label for="exampleInputEmail1">Kategori:</label>
+    @Html.TextBoxFor(x => x.kategori, new { @class = "form-control" })
+
+</div>
+    <br />
+    <button type="submit" class="btn btn-primary">Tarif Güncelle</button>
+
+}
+

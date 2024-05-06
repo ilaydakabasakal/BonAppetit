@@ -1,0 +1,129 @@
+﻿
+@{ ViewBag.Title = "Kullanici";
+                Layout = "~/Views/Shared/Kullanici_Layout.cshtml"; }
+
+
+
+<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                <div class="about-text">
+                    <small class="small-text"><span class="mobile-block"></span></small>
+                    <h1 class="animated animated-text">
+                        <span class="mr-2">Yemek Dünyasına Hoşgeldiniz</span>
+                    </h1>
+                    <p>Ülkelerin eşsiz tatlarını tanıtan tarifler ile dünyanın dört bir yanındaki lezzetleri keşfedin ve bu muhteşem tatları evinizde yaratın.</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-12">
+                <div class="about-image svg">
+                    <img src="~/kullaniciicin/images/undraw/r2.png" class="img-fluid" alt="svg image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<br />
+<br />
+
+
+
+<br />
+<br />
+<br />
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="~/kullaniciicin/images/project/curry-7249247.jpg" alt="Fotoğraf 1">
+        </div>
+        <div class="swiper-slide">
+            <img src="~/kullaniciicin/images/project/fish-5994942.jpg" alt="Fotoğraf 2">
+        </div>
+        <div class="swiper-slide">
+            <img src="~/kullaniciicin/images/project/green-8667981.jpg" alt="Fotoğraf 3">
+        </div>
+        <div class="swiper-slide">
+            <img src="~/kullaniciicin/images/project/meal-5921491.jpg" alt="Fotoğraf 4">
+        </div>
+        <div class="swiper-slide">
+            <img src="~/kullaniciicin/images/project/plate-2802332.jpg" alt="Fotoğraf 5">
+        </div>
+    </div>
+</div>
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+<div class="textbox-container">
+    <div class="textbox">
+        <h1>Dünya Mutfağı</h1>
+
+        <p>Yemek kültürlerini keşfetmek için dünya turuna çıkın! Ülkelerin eşsiz tatlarını tanıtan tarifler ve mutfak hikayeleriyle, dünyanın dört bir yanındaki lezletleri deneyimleyin ve evinizde bu muhteşem tatları yaratın</p>
+    </div>
+    <div class="textbox">
+        <h1>Favoriler</h1>
+        <p> Kendi özel yemek defterinizi oluşturun! En sevdiğiniz yemeklerin tariflerini burada saklayarak kolayca erişebilir ve tekrar deneyebilirsiniz. </p>
+    </div>
+    <div class="textbox">
+        <h1>Tariflerini Paylaş</h1>
+        <p> Tariflerinizi paylaşın ve yemek dünyasına katkıda bulunun. Lezzetli yemeklerinizin tariflerini bizimle paylaşın ve mutfak tutkunlarının beğenisini kazansın.</p>
+    </div>
+</div>
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12">
+                <p class="copyright-text text-center">Copyright &copy; 2024 Company Name . All rights reserved</p>
+                <p class="copyright-text text-center">Designed by </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- Sayfanın içeriği buraya gelecek -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // Swiper.js kullanarak slayt gösterisini oluşturun
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3, // Ekranda görünecek slayt sayısı
+        spaceBetween: 30, // Slaytlar arası boşluk
+        loop: true, // Slaytları döngü halinde göster
+        autoplay: {
+            delay: 3000, // Otomatik oynatma süresi (ms)
+            disableOnInteraction: false // Kullanıcı etkileşimiyle otomatik oynatmayı devre dışı bırakma
+        }
+    });
+</script>
+<script src="~/kullaniciicin/js/jquery-3.3.1.min.js"></script>
+<script src="~/kullaniciicin/js/popper.min.js"></script>
+<script src="~/kullaniciicin/js/bootstrap.min.js"></script>
+<script src="~/kullaniciicin/js/Headroom.js"></script>
+<script src="~/kullaniciicin/js/jQuery.headroom.js"></script>
+<script src="~/kullaniciicin/js/owl.carousel.min.js"></script>
+<script src="~/kullaniciicin/js/smoothscroll.js"></script>
+<script src="~/kullaniciicin/js/custom.js"></script>

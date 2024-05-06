@@ -1,0 +1,42 @@
+﻿
+@model YemekSitesi.Models.Tables.tbl_tarif
+
+@{ViewBag.Title = "TarifGonder";
+    Layout = "~/Views/Shared/Kullanici_Layout.cshtml"; }
+
+
+<div class="wrapper">
+    <div class="inner">
+        <img src="~/tarifgonder1/images/wok-pan.png" alt="" class="image-1">
+
+
+
+        @using (Html.BeginForm("TarifGonder", "Kullanici", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+<div class="form-holder">
+    <h3>TARİF GÖNDER</h3>
+    <label style="color:black">Başlık</label>
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+    <br />
+    <label style="color:black;">Malzemeler</label>
+    @Html.TextBoxFor(x => x.malzemeler, new { @class = "form-control" })
+    <br />
+    <label style="color:black" ";>Tarif</label>
+    @Html.TextAreaFor(x => x.metin, new { @class = "form-control" })
+    <br />
+    <label style="color:black" ";>Kategori</label>
+    @Html.DropDownListFor(x => x.kategoriID, new SelectList(ViewBag.Kategoriler, "kategoriID", "kategoriAd"), "", new { @class = "form-control" })
+    <br />
+
+    <label for="exampleInputEmail1" style="color:black">Resim Yükle:</label>
+    <input type="file" name="file" id="exampleInputEmail1" style="border: 1px solid #ccc; padding: 5px; border-radius: 4px; color:black" />
+</div>
+
+                <button>
+                    <span>Gönder</span>
+                </button>}
+
+        <img src="~/tarifgonder1/images/wrt.png" alt="" class="image-2">
+    </div>
+
+</div>

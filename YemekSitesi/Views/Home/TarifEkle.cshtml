@@ -1,0 +1,32 @@
+﻿@model YemekSitesi.Models.Tables.tbl_tarif
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Tarif Ekle</h3>
+<br />
+<br />
+@using (Html.BeginForm("TarifEkle", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+<div class="form-group">
+    <label >Başlık:</label>
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+    <br />
+    <label>Malzemeler:</label>
+    @Html.TextBoxFor(x => x.malzemeler, new { @class = "form-control" })
+    <br />
+    <label >Metin:</label>
+    @Html.TextAreaFor(x => x.metin, new { @class = "form-control" })
+    <br />
+    <label >Kategori:</label>
+    @Html.DropDownListFor(x => x.kategoriID, new SelectList(ViewBag.Kategoriler, "kategoriID", "kategoriAd"), "", new { @class = "form-control" })
+    <br />
+    <label for="exampleInputEmail1">Resim Yükle:</label>
+    <input type="file" name="file" id="exampleInputEmail1" style="border: 1px solid #ccc; padding: 5px; border-radius: 4px;" />
+</div>
+    <br />
+    <button type="submit" class="btn btn-success" style="right:10px;">Tarif Ekle</button>
+}
+

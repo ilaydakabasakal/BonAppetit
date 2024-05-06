@@ -1,0 +1,75 @@
+﻿@model List<YemekSitesi.Models.Tables.tbl_tarif>
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Tarifler</h3>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"></li>
+</ol>
+<ul class="nav nav-pills justify-content-end mb-3">
+    <li class="nav-item mx-1">
+        @Html.ActionLink("Ekle", "TarifEkle", "Home", null, new { @class = "btn btn-success", aria_current = "page" })
+    </li>
+</ul>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table" id=" datatablesSimple">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Başlık</th>
+                    <th scope="col">Malzemeler</th>
+                    <th scope="col">Metin</th>
+                    <th scope="col">Resim</th>
+                    <th scope="col">Kategori</th>
+                    <th scope="col">İşlem</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tarifler in Model)
+                {
+                <tr>
+
+                    <th scope="row">@tarifler.tarifID</th>
+                    <td>@tarifler.baslik</td>
+                    <td>@tarifler.malzemeler</td>
+                    <td>@tarifler.metin</td>
+                    <td><img src="@Url.Content(tarifler.resim)" alt="Resim" style="height:100px; width:100px;" /></td>
+                    @*<td>@tarifler.kategoriID</td>*@
+                    <td>
+                        @if (tarifler.kategori != null)
+                        {
+                            <span> @tarifler.kategori.kategoriAd</span>
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </td>
+
+                    <th scope="row">
+                        @Html.ActionLink("Güncelle", "TarifGuncelle2", "Home", new { tarifID = tarifler.tarifID }, new { @class = "btn btn-primary btn-sm" })
+                        @Html.ActionLink("Sil", "TarifSil2", "Home", new { tarifID = tarifler.tarifID }, new { @class = "btn btn-danger btn-sm" })
+                    </th>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+    </div>
+</div>
+

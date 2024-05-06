@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/Anasayfa_Layout.cshtml";
+}
+
+<div id="app">
+    <!-- Travel slider -->
+    <div class="travel-slider">
+        <!-- Rotating Planet -->
+        <div class="travel-slider-planet" style="transform: translate(-50%, -50%) rotate(0deg); transition-duration: 0ms;">
+            <img src="~/template/assets/earth.svg">
+            <div class="travel-slider-cities travel-slider-cities-8">
+                <img src="~/template/assets/usa.svg">
+                <img src="~/template/assets/england.svg">
+                <img src="~/template/assets/france.svg">
+                <img src="~/template/assets/italy.svg">
+                <img src="~/template/assets/russia.svg">
+                <img src="~/template/assets/egypt.svg">
+                <img src="~/template/assets/india.svg">
+                <img src="~/template/assets/japan.svg">
+            </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+            <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(533.5px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" style="margin-right: 64px;">
+                        <img src="~/template/assets/usa.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">Amerika</div>
+                        <div class="travel-slider-subtitle">8,295 properties</div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-visible swiper-slide-next" style="margin-right: 64px;">
+                        <img src="~/template/assets/england.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">İngiltere</div>
+                        <div class="travel-slider-subtitle">1,110 properties</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="margin-right: 64px;">
+                        <img src="~/template/assets/france.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">Fransa</div>
+                        <div class="travel-slider-subtitle">314 properties</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="margin-right: 64px;">
+                        <img src="~/template/assets/italy.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">İtalya</div>
+                        <div class="travel-slider-subtitle">1,200 properties</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="margin-right: 64px;">
+                        <img src="~/template/assets/russia.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">Rusya</div>
+                        <div class="travel-slider-subtitle">12,231 properties</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="margin-right: 64px;">
+                        <img src="~/template/assets/egypt.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">Mısır</div>
+                        <div class="travel-slider-subtitle">505 properties</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="margin-right: 64px;">
+                        <img src="~/template/assets/india.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">Hindistan</div>
+                        <div class="travel-slider-subtitle">2,300 properties</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="margin-right: 64px;">
+                        <img src="~/template/assets/japan.jpg" class="travel-slider-bg-image">
+                    <div class="travel-slider-content">
+                        <div class="travel-slider-title">Japonya</div>
+                        <div class="travel-slider-subtitle">1,700 properties</div>
+                    </div>
+                </div>
+            </div>
+        </div>v>
+    </div>
+</div>
+

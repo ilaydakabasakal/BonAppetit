@@ -1,0 +1,72 @@
+﻿@model List<YemekSitesi.Models.Tables.tbl_uye>
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Üyeler</h3>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"></li>
+</ol>
+<ul class="nav nav-pills justify-content-end mb-3">
+    <li class="nav-item mx-1">
+        @Html.ActionLink("Ekle", "UyeEkle", "Home", null, new { @class = "btn btn-success", aria_current = "page" })
+    </li>
+</ul>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+    </div>
+    
+    <div class="card-body">
+
+        <table class="table" id=" datatablesSimple">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Ad</th>
+                    <th scope="col">Soyad</th>
+                    <th scope="col">Kullanıcı Adı</th>
+                    <th scope="col">E posta</th>
+                    <th scope="col">Durum</th>
+                    <th scope="col">İşlem</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var uyeler in Model) {
+                <tr>
+
+                    <th scope="row">@uyeler.uyeID</th>
+                    <td>@uyeler.uyeAd</td>
+                    <td>@uyeler.uyeSoyad</td>
+                    <td>@uyeler.uyeKullaniciAd</td>
+                    <td>@uyeler.uyeEposta</td>
+                    <td>
+                        @if (uyeler.UyeTipi == 0)
+                        {
+                            <span>Üye</span>
+                        }
+                        @if (uyeler.UyeTipi == 1)
+                        {
+                            <span>Admin</span>
+                        }
+                        
+                    </td>
+                    <th scope="row">
+                        @Html.ActionLink("Güncelle", "UyeGuncelle2", "Home", new { uyeID = uyeler.uyeID }, new { @class = "btn btn-primary btn-sm" })
+
+                </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+    </div>
+</div>
+

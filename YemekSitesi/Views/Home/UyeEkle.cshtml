@@ -1,0 +1,30 @@
+﻿@model YemekSitesi.Models.Tables.tbl_uye
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h3 class="mt-4">Üye Ekle</h3>
+<br />
+<br />
+@using (Html.BeginForm()) { 
+    <div class="form-group">
+        <label for="exampleInputEmail1">Ad:</label>
+        @Html.TextBoxFor(x => x.uyeAd, new { @class = "form-control" })
+        <br />
+        <label for="exampleInputEmail1">Soyad:</label>
+        @Html.TextBoxFor(x => x.uyeSoyad, new { @class = "form-control" })
+        <br />
+        <label for="exampleInputEmail1">Kullanıcı Adı:</label>
+        @Html.TextBoxFor(x => x.uyeKullaniciAd, new { @class = "form-control" })
+        <br />
+        <label for="exampleInputEmail1">E-Posta:</label>
+        @Html.TextBoxFor(x => x.uyeEposta, new { @class = "form-control" })
+        <br />
+        <label for="exampleInputPassword1">Şifre</label>
+        @Html.TextBoxFor(x => x.uyeParola, new { @class = "form-control" })
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success" style="right:10px;">Üye Ekle</button>
+}
+
